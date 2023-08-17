@@ -207,8 +207,13 @@ class _JsonEditorState extends State<JsonEditor> {
         readOnly: !widget.enabled,
         focusNode: _editFocus,
         controller: _editController,
+        textAlignVertical: TextAlignVertical.top,
         decoration: InputDecoration(
-            border: InputBorder.none,
+            border: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+                borderSide: BorderSide(
+                  // color: Constants.SECONDARY_COLOR,
+                )),
             isDense: true,
             errorText: _errMessage,
             errorMaxLines: 10),
